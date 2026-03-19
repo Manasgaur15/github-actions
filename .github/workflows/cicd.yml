@@ -23,4 +23,11 @@ jobs:
     steps:
       - name: testing contianer
         run: echo "testing the container"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: final deployment
+        run: echo "Application successfully deployed"
         
