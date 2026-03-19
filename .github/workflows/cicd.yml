@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build docker container
-        run: echo" Docker container built"
+        run: echo "Docker container built"
 
 
   test:
     runs-on: ubuntu-latest
     steps:
       - name: testing contianer
-        run: echo:testing the container"
+        run: echo "testing the container"
         
