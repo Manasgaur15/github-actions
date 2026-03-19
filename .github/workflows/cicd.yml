@@ -12,6 +12,7 @@ jobs:
         run: echo "cloning code form github"
 
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: Build docker container
@@ -19,6 +20,7 @@ jobs:
 
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: testing contianer
