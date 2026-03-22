@@ -2,7 +2,10 @@
 name: hello workflow
 #runs on a trigger
 on:
-  workflow_dispatch: 
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
 
     
 #these are jobs inside workflow
