@@ -27,7 +27,7 @@ jobs:
         run: echo "testing the container"
 
   deploy:
-    needs: test
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
       - name: final deployment
