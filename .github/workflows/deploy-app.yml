@@ -3,10 +3,12 @@ name: Deploy apps
 on:
     workflow_dispatch:
 
-jobs:
-    env:
-        DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
+env:
+    DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
         
+
+jobs:
+    
     deploy:
         runs-on: self-hosted
 
