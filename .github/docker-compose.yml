@@ -1,0 +1,6 @@
+services:
+
+    web:
+        image: ${DOCKERHUB_USER}/myapp:latest
+        ports:
+            - "80:80"
