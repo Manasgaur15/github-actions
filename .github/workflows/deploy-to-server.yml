@@ -1,0 +1,25 @@
+name: Deploy to Server
+
+on:
+  workflow_call:
+    
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH to server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.EC2_SSH_HOST }}
+          username: ${{ secrets.EC2_SSH_USER }}
+          key: ${{ secrets.EC2_SSH_Private_KEY }}
+          script: |
+            echo "Deploying to server..."
+            # Add your deployment commands here, e.g., pull latest code, restart services, etc.
+            cd /path/to/your/app
+            git pull origin main
+            # Restart your application if necessary, e.g., systemctl restart myapp
+      
+      
+      
