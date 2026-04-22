@@ -24,4 +24,6 @@ jobs:
         needs: [code-quality, security-scan, dependency-scan, docker-lint]
         uses: ./.github/workflows/docker-build-push.yml
         secrets: inherit
-
+    trivy:
+        needs: build-and-push
+        uses: ./.github/workflows/image-scan.yml
