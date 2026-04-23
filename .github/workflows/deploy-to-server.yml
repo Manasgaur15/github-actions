@@ -16,10 +16,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_Private_KEY }}
           script: |
             echo "Deploying to server..."
-            # Add your deployment commands here, e.g., pull latest code, restart services, etc.
-            cd /path/to/your/app
-            git pull origin main
-            # Restart your application if necessary, e.g., systemctl restart myapp
-      
+            
       
       
